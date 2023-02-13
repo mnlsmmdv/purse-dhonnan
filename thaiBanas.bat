@@ -34,6 +34,7 @@ POWERCFG -X -hibernate-timeout-ac 0
 
 REM Set Google Chrome as the default web browser
 REG ADD "HKCR\HTTP\shell\open\command" /ve /t REG_SZ /d "\"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe\" -- \"%1\"" /f
+REG ADD "HKCR\HTTPS\shell\open\command" /ve /t REG_SZ /d "\"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe\" -- \"%1\"" /f
 
 REM Set VLC as the default media player
 REG ADD "HKCR\.mp3\OpenWithProgids" /v "VLC.mp3" /t REG_NONE /d "" /f
