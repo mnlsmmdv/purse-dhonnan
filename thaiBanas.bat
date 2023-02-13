@@ -14,7 +14,6 @@
 REM Remove Microsoft Edge and Outlook, news and interests icons from taskbar
 REG ADD "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v ShowInfoTip /t REG_DWORD /d 0 /f
 REG ADD "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v ShowTaskViewButton /t REG_DWORD /d 0 /f
-REG ADD "HKLM\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v ShowTaskViewButton /t REG_DWORD /d 0 /f
 REG ADD "HKLM\Software\Microsoft\Windows\CurrentVersion\Search" /v BingSearchEnabled /t REG_DWORD /d 0 /f
 
 REM Show "This PC" icon on the desktop
@@ -35,7 +34,6 @@ POWERCFG -X -hibernate-timeout-ac 0
 
 REM Set Google Chrome as the default web browser
 REG ADD "HKCR\HTTP\shell\open\command" /ve /t REG_SZ /d "\"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe\" -- \"%1\"" /f
-REG ADD "HKCR\HTTPS\shell\open\command" /ve /t REG_SZ /d "\"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe\" -- \"%1\"" /f
 
 REM Set VLC as the default media player
 REG ADD "HKCR\.mp3\OpenWithProgids" /v "VLC.mp3" /t REG_NONE /d "" /f
